@@ -1,0 +1,5 @@
+<div *ngIf="cargando">Cargando productos...</div>
+<app-productocard *ngFor="let producto of productsTotal$ | async"
+  [producto]="producto"
+  (productoComprado)="manejarCompra(producto)">
+</app-productocard>
